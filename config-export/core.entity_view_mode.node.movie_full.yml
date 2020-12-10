@@ -1,0 +1,10 @@
+uuid: fcb62e3d-53c2-42bb-88a6-20bb8e5ed762
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.movie_full
+label: 'Movie Full'
+targetEntityType: node
+cache: true

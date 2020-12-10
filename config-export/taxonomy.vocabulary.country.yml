@@ -1,0 +1,8 @@
+uuid: e9e53196-297a-41d9-9c0e-34119dfd9aed
+langcode: en
+status: true
+dependencies: {  }
+name: Country
+vid: country
+description: 'Movie Production Country'
+weight: 0

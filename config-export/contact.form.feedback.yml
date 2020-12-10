@@ -1,0 +1,19 @@
+uuid: d8ca8a8d-ab4f-492e-98b9-5b1983cfb134
+langcode: en
+status: false
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    disabled_form_message: 'This contact form has been disabled.'
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - anton.semionov1@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

@@ -1,0 +1,19 @@
+uuid: 3038d464-5794-452a-8c29-a25b4429cd8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_birth_country
+    - taxonomy.vocabulary.director
+id: taxonomy_term.director.field_birth_country
+field_name: field_birth_country
+entity_type: taxonomy_term
+bundle: director
+label: 'Birth Country'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

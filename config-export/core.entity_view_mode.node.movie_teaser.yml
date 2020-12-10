@@ -1,0 +1,10 @@
+uuid: 66418764-21cf-4dc8-a5d4-a21acdc1a792
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.movie_teaser
+label: 'Movie Teaser'
+targetEntityType: node
+cache: true

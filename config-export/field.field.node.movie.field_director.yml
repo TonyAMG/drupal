@@ -1,0 +1,29 @@
+uuid: 3fe67bca-8f7e-4fda-aefa-4b6fbee80b3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_director
+    - node.type.movie
+    - taxonomy.vocabulary.director
+id: node.movie.field_director
+field_name: field_director
+entity_type: node
+bundle: movie
+label: DIrector
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      director: director
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

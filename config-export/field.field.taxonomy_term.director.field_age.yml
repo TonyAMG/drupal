@@ -1,0 +1,23 @@
+uuid: dbbb972b-d364-46d6-9691-eacfca47c1b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_age
+    - taxonomy.vocabulary.director
+id: taxonomy_term.director.field_age
+field_name: field_age
+entity_type: taxonomy_term
+bundle: director
+label: 'Birth Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

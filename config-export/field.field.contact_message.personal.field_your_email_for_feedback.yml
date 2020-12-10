@@ -1,0 +1,19 @@
+uuid: d77600b5-c072-41a9-b403-9aa36eb6f8a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.storage.contact_message.field_your_email_for_feedback
+id: contact_message.personal.field_your_email_for_feedback
+field_name: field_your_email_for_feedback
+entity_type: contact_message
+bundle: personal
+label: 'Your Email for feedback'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

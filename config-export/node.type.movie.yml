@@ -1,0 +1,18 @@
+uuid: c9adf0bf-c167-4dd7-98ab-76279242528a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Movie
+type: movie
+description: 'Use <em>movies</em> for adding new Movies to your website'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
