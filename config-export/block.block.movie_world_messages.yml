@@ -1,0 +1,22 @@
+uuid: 54a5d089-60b9-442b-a9e6-4799f27b6f7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - movie_world
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: movie_world_messages
+theme: movie_world
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

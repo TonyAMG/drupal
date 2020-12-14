@@ -5,11 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.movie.field_budget
-    - field.field.node.movie.field_country
     - field.field.node.movie.field_director
+    - field.field.node.movie.field_dirr
     - field.field.node.movie.field_plot2
     - field.field.node.movie.field_poster
-    - field.field.node.movie.field_production_country
     - field.field.node.movie.field_release_year
     - node.type.movie
   module:
@@ -36,8 +35,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_budget: true
-  field_country: true
   field_director: true
+  field_dirr: true
   field_plot2: true
-  field_production_country: true
   field_release_year: true

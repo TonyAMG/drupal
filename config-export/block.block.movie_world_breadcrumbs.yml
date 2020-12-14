@@ -1,0 +1,22 @@
+uuid: 693954c9-0ea0-4b71-b26a-7d4178cf4127
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - movie_world
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: movie_world_breadcrumbs
+theme: movie_world
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

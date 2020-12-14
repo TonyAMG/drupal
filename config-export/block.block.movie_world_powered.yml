@@ -1,0 +1,22 @@
+uuid: a06d6ab9-77df-475c-a741-1096af48c3b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - movie_world
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: movie_world_powered
+theme: movie_world
+region: footer_fifth
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

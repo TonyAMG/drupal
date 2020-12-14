@@ -1,0 +1,22 @@
+uuid: d0b2a8c2-27b1-47bf-82b2-192ee7f2fd33
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - movie_world
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: movie_world_content
+theme: movie_world
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

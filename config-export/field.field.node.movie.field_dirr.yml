@@ -1,17 +1,17 @@
-uuid: 790f68ac-97f4-4d24-9201-20adf0a077a5
+uuid: 0e4c4a71-15aa-4eef-9f1a-c4dc232d394d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_production_country
+    - field.storage.node.field_dirr
     - node.type.movie
     - taxonomy.vocabulary.country
-id: node.movie.field_production_country
-field_name: field_production_country
+id: node.movie.field_dirr
+field_name: field_dirr
 entity_type: node
 bundle: movie
 label: 'Production Country'
-description: ''
+description: 'Production Country'
 required: false
 translatable: false
 default_value: {  }

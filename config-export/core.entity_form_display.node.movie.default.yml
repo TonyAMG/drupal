@@ -4,11 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.movie.field_budget
-    - field.field.node.movie.field_country
     - field.field.node.movie.field_director
+    - field.field.node.movie.field_dirr
     - field.field.node.movie.field_plot2
     - field.field.node.movie.field_poster
-    - field.field.node.movie.field_production_country
     - field.field.node.movie.field_release_year
     - image.style.thumbnail
     - node.type.movie
@@ -33,14 +32,6 @@ content:
     third_party_settings: {  }
     type: number
     region: content
-  field_country:
-    weight: 12
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_director:
     type: entity_reference_autocomplete
     weight: 9
@@ -51,6 +42,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_dirr:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_plot2:
     weight: 13
     settings:
@@ -66,16 +67,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_production_country:
-    weight: 14
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_release_year:
     weight: 10
