@@ -1,0 +1,13 @@
+slick-slider:
+  version: 1.x
+  js:
+    js/jquery-3.5.1.min.js: {}
+    js/slick.js: {}
+    js/front.js: {}
+  css:
+    theme:
+      css/slick.css: {}
+      css/slick-theme.css: {}
+      #css/front.css: {}
+  #dependencies:
+    #- core/jquery

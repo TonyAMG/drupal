@@ -1,0 +1,78 @@
+<?php
+/**
+ * @file
+ *
+ * Place your custom PHP code in this file.
+ */
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\node\Entity\Node;
+
+function movie_world_preprocess_page__front(array &$variables) {
+
+  // If page is front, add to the $variables values for twig template
+  if ($variables['is_front']) {
+
+    $variables['#attached']['library'][] = 'movie_world/slick-slider';
+
+    // Create data for slider
+    // Get from DB nids of content type slider_image
+    $query = Drupal::database()->select('node', 'n');
+    $query->fields('n', ['nid']);
+    $query->condition('n.type', 'movie');
+    $nids = $query->execute()->fetchAll();
+
+    $variables['home_page']['slides'] = array();
+
+    // get and set values from content type to variable
+    foreach ($nids as $val) {
+      $node = Node::load($val->nid);
+
+      $node_url = Url::fromRoute('entity.node.canonical', ['node' => $val->nid]);
+
+      //$text = $node->get('field_release_year')->getValue();
+      $poster = $node->get('field_poster')->getValue();
+
+      $file = File::load($poster[0]['target_id']);
+      $img_src = $file->createFileUrl();
+
+      $variables['home_page']['slides'][] = array(
+        'node_url' => $node_url,
+        //'text' => $text[0]['value'],
+        'img_src' => $img_src,
+      );
+    }
+
+  }
+}
+
+
+/*
+function movie_world_preprocess_page(&$variables) {
+    // get all articles, written by author
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node) {
+        $query = \Drupal::database()->select('node__field_blog', 'nfb');
+        $query->addField('nfb', 'entity_id');
+        $query->condition('nfb.field_blog_target_id', $node->id() );
+
+        $query->addField( 'node_data', 'title' );
+        $query->addField( 'node_data', 'created' );
+        $query->leftJoin( 'node_field_data', 'node_data', 'node_data.nid=nfb.entity_id' );
+
+        $query->addField( 'nb', 'body_value' );
+        $query->leftJoin( 'node__body', 'nb', 'nb.entity_id=nfb.entity_id' );
+
+        $query->addField('node_img', 'field_image_target_id');
+        $query->leftJoin( 'node__field_image', 'node_img', 'node_img.entity_id=nfb.entity_id' );
+
+        $nids = $query->execute()->fetchAll();
+        $data_to_render = array();
+
+        $variables['author_articles'] = $data_to_render;
+    }
+}
+*/
