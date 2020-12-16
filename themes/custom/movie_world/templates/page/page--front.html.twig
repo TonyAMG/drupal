@@ -83,7 +83,18 @@
         </div>
       {% endfor %}
     </section>
-
+    <script type="text/javascript">
+      $('.regular').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        speed: 2000,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+      });
+    </script>
     <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
       <div id="main" class="layout-main clearfix">
         {{ page.breadcrumb }}

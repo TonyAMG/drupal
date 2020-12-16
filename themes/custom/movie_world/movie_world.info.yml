@@ -3,6 +3,7 @@ type: theme
 description: 'Simple theme for Movie World website.'
 logo: logo.png
 core_version_requirement: ^8 || ^9
+version: 1.0.0
 #libraries:
   #- movie_world/slick-slider
 base theme: bartik
