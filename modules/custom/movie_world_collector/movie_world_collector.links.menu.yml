@@ -1,0 +1,7 @@
+movies.list:
+  title: 'Popular Movies Online'
+  description: 'some description about the catalogue menu item'
+  route_name: movies.list
+  parent: main
+  menu_name: main
+

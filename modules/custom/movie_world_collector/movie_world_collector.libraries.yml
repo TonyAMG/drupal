@@ -1,0 +1,23 @@
+slick-slider:
+  version: 1.x
+  js:
+    //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js: {}
+  css:
+    theme:
+      css/slick.css: {}
+      css/slick-theme.css: {}
+  dependencies:
+    - core/jquery
+
+slider-init:
+  version: 1.x
+  js:
+    js/slider-init.js: {}
+  dependencies:
+    - movie_world/slick-slider
+
+movie-details:
+  version: 1.x
+  css:
+    theme:
+      css/movie-details-page.css: {}

@@ -1,0 +1,7 @@
+name: Movie World Collector
+description: This module uses external API https://www.themoviedb.org/ to display movies info on the pages of Drupal.
+package: Custom
+type: module
+version: 1.0.0
+core_version_requirement: ^8 || ^9
+

@@ -41,9 +41,10 @@ sites/simpletest
 # Ignore SimpleTest multi-site environment.
 # simpletest
 
-
 /profiles/
 /.idea/
-/modules/
+/modules/content_sync/
+/modules/contrib/
+
 /sites/
 
