@@ -1,8 +1,7 @@
 slick-slider:
   version: 1.x
-  header: true
   js:
-    js/slick.js: {}
+    //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js: {}
   css:
     theme:
       css/slick.css: {}
@@ -10,3 +9,9 @@ slick-slider:
   dependencies:
     - core/jquery
 
+slider-init:
+  version: 1.x
+  js:
+    js/slider-init.js: {}
+  dependencies:
+    - movie_world_collector/slick-slider

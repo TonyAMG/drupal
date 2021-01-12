@@ -24,7 +24,8 @@
         "drupal/core-vendor-hardening": "^9.1",
         "drupal/devel": "^4.0",
         "drupal/features": "^3.11",
-        "drush/drush": "^10.3"
+        "drush/drush": "^10.3",
+        "ext-json": "*"
     },
     "conflict": {
         "drupal/drupal": "*"

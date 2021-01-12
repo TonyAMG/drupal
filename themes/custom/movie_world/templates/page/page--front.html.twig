@@ -74,27 +74,21 @@
       </div>
     {% endif %}
 
+    <!-- Slider Objects Rendering -->
     <section class="regular slider">
       {% for slide in home_page.slides %}
         <div>
+          {{ slide.title }}
           <a href="{{ slide.node_url }}">
-            <img src="{{ slide.img_src }}">
+            <img src="{{ slide.img_src }}" alt="Movie Poster">
           </a>
         </div>
       {% endfor %}
     </section>
-    <script type="text/javascript">
-      $('.regular').slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        speed: 2000,
-        slidesToShow: 5,
-        slidesToScroll: 2,
-      });
-    </script>
+
+    <!-- Slick Slider Initialization -->
+    {{ attach_library('movie_world/slider-init') }}
+
     <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
       <div id="main" class="layout-main clearfix">
         {{ page.breadcrumb }}
