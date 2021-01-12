@@ -1,0 +1,62 @@
+/************* Big Block Elements *************/
+.mwc-module-movie-details-page {
+    margin-left: 0;
+}
+/************* Big Block Elements *************/
+
+
+/************* Small Block Elements *************/
+.mwc-module-movie-title {
+    font-size: 27px;
+    margin-bottom: 1px;
+    margin-top: 20px;
+    color: #1870b5;
+}
+
+.mwc-module-movie-original-title {
+    font-size: 20px;
+    margin-bottom: 1px;
+}
+/************* Small Block Elements *************/
+
+
+/************* Column Elements *************/
+.mwc-module-movie-logo-column {
+    display: inline-block;
+    margin-top: 9px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.mwc-module-movie-details-column {
+    display: inline-block;
+    width: 350px;
+    margin-right: 20px;
+    vertical-align: top;
+    line-height: 2em;
+    font-size: 17px;
+}
+
+.mwc-module-movie-overview-column {
+    display: inline-block;
+    width: 500px;
+    vertical-align: top;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.5em;
+    text-justify: inter-word;
+}
+/************* Column Elements *************/
+
+
+/************* Inline Elements *************/
+.mwc-module-movie-desc-headers {
+    font-size: 23px;
+    color: #777373;
+}
+
+.mwc-module-movie-desc {
+    font-size: 20px;
+    color: #1870b5;
+}
+/************* Inline Elements *************/

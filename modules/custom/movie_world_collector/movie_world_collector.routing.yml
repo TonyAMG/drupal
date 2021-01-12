@@ -1,0 +1,25 @@
+movies.list:
+  path: '/movies/list/{page}'
+  defaults:
+    _controller: '\Drupal\movie_world_collector\Controller\MoviesListController::content'
+    _title: 'Popular Movies'
+    page: 1
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      page:
+        type: entity:page
+
+movie.detalis:
+  path: '/movie/details/{movie}'
+  defaults:
+    _controller: '\Drupal\movie_world_collector\Controller\MovieDetailsController::content'
+    #_title: 'Movie Details'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      movie:
+        type: entity:movie
+
