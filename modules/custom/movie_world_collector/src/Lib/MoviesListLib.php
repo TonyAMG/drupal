@@ -6,6 +6,9 @@ namespace Drupal\movie_world_collector\Lib;
 
 class MoviesListLib
 {
+
+
+  //генератор архива страниц
   public static function pagesGenerator($page_min, $page_max, $page): string
   {
     $pages_list = '';
@@ -19,6 +22,16 @@ class MoviesListLib
     }
 
     return $pages_list;
+  }
+
+
+  //делаем красивую дату
+  public static function datePrepare($date_raw, $substitute_word): string
+  {
+    if (empty($date_raw))
+      return $substitute_word;
+    $date_arr = explode('-', $date_raw);
+    return '<b>' . $date_arr[0] . '</b>' . '-' . $date_arr[1]. '-' . $date_arr[2];
   }
 
 

@@ -32,16 +32,23 @@ class MoviesListController extends ControllerBase
 
     foreach ($response['results'] as $movie) {
 
-      $title = MLL::titlePrepare($movie['title'], 15, 7);
+      $title  = MLL::titlePrepare($movie['title'], 15, 7);
       $poster = 'https://image.tmdb.org/t/p/w342' . $movie['poster_path'];
-      $link = $GLOBALS['base_url'] . '/movie/details/' . $movie['id'];
+      $link   = $GLOBALS['base_url'] . '/movie/details/' . $movie['id'];
+      $date   = MLL::datePrepare($movie['release_date'], 'неизвестно');
+      $vote   = '<b>' . $movie['vote_average'] . '</b> [ ' . $movie['vote_count'] . ' ] ';
 
       $build .= '
         <div>
             <h1><a href="'. $link .'" target="_blank">' . $title . '</a></h1>
             <a href="'. $link .'" target="_blank"><img src="' . $poster . '" alt="Movie Poster"></a>
+            <div class="movie-info-bottom">
+                <span class="date">' . $date . '</span>
+                <span class="budget">' . $vote . '</span>
+            </div>
         </div>
       ';
+
     }
 
     $build .= '</section>';

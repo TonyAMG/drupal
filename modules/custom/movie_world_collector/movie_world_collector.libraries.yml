@@ -21,3 +21,9 @@ movie-details:
   css:
     theme:
       css/movie-details-page.css: {}
+
+movies-list:
+  version: 1.x
+  css:
+    theme:
+      css/movies-list-page.css: {}
