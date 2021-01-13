@@ -3,6 +3,7 @@
 function movie_world_collector_preprocess_page__movies__list(&$variables)
 {
   $variables['#attached']['library'][] = 'movie_world_collector/slider-init';
+  $variables['#attached']['library'][] = 'movie_world_collector/movies-list';
 }
 
 
