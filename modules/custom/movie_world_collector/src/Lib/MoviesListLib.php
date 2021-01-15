@@ -25,6 +25,14 @@ class MoviesListLib
   }
 
 
+  //делаем красивый рейтинг
+  public static function ratingPrepare($vote_count_raw, $vote_average): string
+  {
+    $vote_count = number_format($vote_count_raw, 0, null, ', ');
+    return '<b>' . $vote_average . '</b> [ ' . $vote_count . ' ] ';
+  }
+
+
   //делаем красивую дату
   public static function datePrepare($date_raw, $substitute_word): string
   {

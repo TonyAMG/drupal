@@ -38,7 +38,7 @@ class MovieDetailsController extends ControllerBase
     $budget         = SCL::prepareFinance('budget', 'неизвестно', $movie);
     $revenue        = SCL::prepareFinance('revenue', 'неизвестно', $movie);
     $runtime        = SCL::prepareRuntime('runtime', 'неизвестно', $movie);
-    $vote = $movie['vote_average'] . ' [ ' . $movie['vote_count'] . ' ] ';
+    $rating         = SCL::prepareRating('vote_average','vote_count', $movie);
 
     $build = '
       <div class="mwc-module-movie-details-page">
@@ -67,7 +67,7 @@ class MovieDetailsController extends ControllerBase
           <span class="mwc-module-movie-desc">' . $product_countr . '</span>
           <br>
           <span class="mwc-module-movie-desc-headers">Рейтинг: &nbsp;</span>
-          <span class="mwc-module-movie-desc">' . $vote . '</span>
+          <span class="mwc-module-movie-desc">' . $rating . '</span>
         </div>
         <div class="mwc-module-movie-overview-column">
            ' . $overview . '
@@ -79,5 +79,4 @@ class MovieDetailsController extends ControllerBase
   }
 
 }
-
 

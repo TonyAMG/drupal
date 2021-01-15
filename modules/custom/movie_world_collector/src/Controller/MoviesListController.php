@@ -36,7 +36,7 @@ class MoviesListController extends ControllerBase
       $poster = 'https://image.tmdb.org/t/p/w342' . $movie['poster_path'];
       $link   = $GLOBALS['base_url'] . '/movie/details/' . $movie['id'];
       $date   = MLL::datePrepare($movie['release_date'], 'неизвестно');
-      $vote   = '<b>' . $movie['vote_average'] . '</b> [ ' . $movie['vote_count'] . ' ] ';
+      $vote   = MLL::ratingPrepare($movie['vote_count'], $movie['vote_average']);
 
       $build .= '
         <div>

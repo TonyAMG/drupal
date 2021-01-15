@@ -16,7 +16,9 @@ class MovieDetailsLib
   //форматируем финансы для красивого вывода
   public static function prepareFinance($type, $substitute_word, $response): string
   {
-    return (!empty($response[$type])) ? '$'.number_format($response[$type], 0, "", ", ") : $substitute_word;
+    return (!empty($response[$type]))
+      ? '$'.number_format($response[$type], 0, "", ", ")
+      : $substitute_word;
   }
 
 
@@ -29,6 +31,13 @@ class MovieDetailsLib
     return $runtime.' мин. / '.floor($runtime / 60) .' ч. '. $runtime % 60 .' мин.';
   }
 
+
+  //форматируем рейтинг для красивого вывода
+  public static function prepareRating($type_1, $type_2, $response): string
+  {
+    $vote_count = number_format($response[$type_2], 0, null, ', ');
+    return $response[$type_1] . ' [ ' . $vote_count . ' ] ';
+  }
 
   //форматируем массив с данными для красивого вывода
   public static function extractArrayParam($type, $subtype, $substitute_word, $response): string
